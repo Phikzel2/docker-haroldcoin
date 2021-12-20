@@ -15,7 +15,8 @@ A multiarch HAROLDCOIN docker image.
 
 ## What is HAROLDCOIN?
 
-HAROLDCOIN is an open source crypto-currency focused on fast private transactions using the Zerocoin protocol, with low transaction fees & environmental footprint. It utilizes the first ever anonymous proof of stake protocol, called zPoS, combined with regular PoS and masternodes for securing its network. Learn more about [HAROLDCOIN](https://github.com/HAROLDCOIN-Project/HAROLDCOIN).
+Haroldcoin is a GPU mineable cryptocurrency hommage inspired by a famous internet celebrity we love greatly. It is an ASIC-resistent memecoin. We believe mining should be possible for everyone without the need for specialized hardware or investments.
+See https://www.haroldcoin.io/ for more information.
 
 ## Usage
 
