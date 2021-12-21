@@ -5,7 +5,7 @@
 # VERSION=3.2.3 make release
 ##########################################
 
-#VERSION=
+VERSION=3.2.3
 SERVICE="haroldcoin"
 ARCH="armhf x86_64"
 ORG="phikzel2"
