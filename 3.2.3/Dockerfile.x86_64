@@ -21,7 +21,8 @@ RUN mkdir haroldcoin-$HRLD_VERSION \
   && cd haroldcoin-$HRLD_VERSION \
   && cp -R . /usr/local/bin/ \
   && cd ~ \
-  && rm -rf /tmp/haroldcoin-$HRLD_VERSION
+  && rm -rf /tmp/haroldcoin-$HRLD_VERSION \
+  && rm /tmp/haroldcoin-armhf.tar.gz
 
 RUN git clone https://github.com/ncopa/su-exec.git \
     && cd su-exec && make && cp su-exec /usr/local/bin/ \
