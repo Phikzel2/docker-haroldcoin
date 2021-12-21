@@ -1,24 +1,24 @@
-FROM debian:bullseye-slim
+FROM debian:buster-slim
 
 ARG HRLD_VERSION=3.2.3
 ARG USER=haroldcoin
 
 RUN useradd -r $USER \
   && apt-get update -y \
-  && apt-get install -y git build-essential curl gnupg unzip wget \
+  && apt-get install -y git curl gnupg unzip wget build-essential libtool autotools-dev autoconf pkg-config automake libboost-filesystem1.67-dev libboost-system1.67-dev libboost-program-options1.67-dev libboost-thread1.67-dev libevent-2.1 libevent-pthreads-2.1-6 libminiupnpc-dev libssl1.0-dev bsdmainutils joe zip libdb5.3-dev libdb5.3++-dev \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 WORKDIR /tmp
 
 # copy source
-COPY 3.2.3/bin/armhf/haroldcoin-armhf.tar.gz /tmp/haroldcoin-armhf.tar.gz
+COPY ./bin/x86_64/haroldcoin-x86_64.tar.gz /tmp/haroldcoin-x86_64.tar.gz
 
 # extract binaries
 RUN mkdir haroldcoin-$HRLD_VERSION \
-  && tar xzpvf haroldcoin-armhf.tar.gz -C haroldcoin-$HRLD_VERSION --strip-components 1\
+  && tar xzpvf haroldcoin-x86_64.tar.gz -C haroldcoin-$HRLD_VERSION\
   && cd haroldcoin-$HRLD_VERSION \
-  && cp * /usr/local/bin/ \
+  && cp -R . /usr/local/bin/ \
   && cd ~ \
   && rm -rf /tmp/haroldcoin-$HRLD_VERSION
 
