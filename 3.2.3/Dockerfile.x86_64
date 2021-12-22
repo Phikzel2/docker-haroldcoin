@@ -5,7 +5,7 @@ ARG USER=haroldcoin
 
 RUN useradd -r $USER \
   && apt-get update -y \
-  && apt-get install -y git curl gnupg unzip wget build-essential libtool autotools-dev autoconf pkg-config automake libboost-filesystem1.65-dev libboost-system1.65-dev libboost-program-options1.65-dev libboost-thread1.65-dev libevent-2.1 libevent-pthreads-2.1-6 libminiupnpc-dev libssl1.0-dev bsdmainutils joe zip libdb5.3-dev libdb5.3++-dev \
+  && apt-get install -y git curl gnupg unzip wget build-essential libtool autotools-dev autoconf pkg-config automake libboost-filesystem1.65-dev libboost-system1.65-dev libboost-program-options1.65-dev libboost-thread1.65-dev libevent-2.1 libevent-pthreads-2.1-6 libminiupnpc-dev libssl1.0-dev bsdmainutils joe zip libdb4.8-dev libdb4.8++-dev \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
